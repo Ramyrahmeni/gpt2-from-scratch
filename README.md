@@ -9,31 +9,6 @@ This project contains an educational, end‑to‑end workflow to build and fine�
 - Simple training loop with evaluation, sample generation, and checkpoint saving
 - Dataset prep helpers for MedQuAD → Alpaca JSONL; example loading of `nvidia/HelpSteer`
 
-## Project structure
-- `gpt2.ipynb`: Primary notebook with the end‑to‑end code (tokenization, model, dataloaders, training, generation, dataset prep)
-- `gpt2/355M/`: Reference GPT‑2 assets (original OpenAI 355M files). Not used by default in the notebook
-- `last_model.pt`, `gpt2_small_trained.pth`, `fine_tuned.pth`: Saved model weights from training runs
-- `medquad.csv`: MedQuAD dataset CSV (input)
-- `medquad_alpaca.jsonl`: MedQuAD converted to Alpaca JSONL (produced by the notebook)
-
-## Requirements
-- Python 3.10+
-- Recommended: NVIDIA GPU with CUDA 11.8 (or CPU, slower)
-
-Python packages used in the notebook:
-- `torch`, `torchvision`, `torchaudio` (CUDA 11.8 build shown in examples)
-- `tiktoken`, `datasets`, `pandas`, `matplotlib`, `ipywidgets`
-- Optional: `transformers`, `huggingface_hub`, `tensorflow` (used only for exploration/visuals)
-
-Quick install (PowerShell):
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install --upgrade pip
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-pip install tiktoken datasets pandas matplotlib ipywidgets transformers huggingface_hub
-```
-
 ## Getting started
 1) Open `gpt2.ipynb` in Jupyter (or VS Code/Colab). Ensure the environment has the packages above.
 2) Run the notebook cells top‑to‑bottom. Early cells demonstrate tokenization and the model components; later cells assemble the training loop and generation utilities.
