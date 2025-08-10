@@ -1,4 +1,4 @@
-## GPT-2 Fine‑tuning and From‑Scratch Notebook
+## GPT-2 From‑Scratch Notebook
 
 This project contains an educational, end‑to‑end workflow to build and fine‑tune a GPT‑style language model using PyTorch, with all steps implemented in the notebook `gpt2.ipynb`. It also includes utilities to prepare the MedQuAD dataset into Alpaca format and optional exploration of the Hugging Face `nvidia/HelpSteer` dataset.
 
